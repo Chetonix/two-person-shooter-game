@@ -17,12 +17,7 @@ document.getElementById("shoot-1").addEventListener("click", function () {
     "Health: " + player1Health;
 
   if (player1Health <= 0) {
-    wonMatchesPlayer2 += 1;
-    document.getElementById("player-2-heading").textContent =
-      "Player 2 - Won: " + wonMatchesPlayer2;
-
-    player1Health = 100;
-    player2Health = 100;
+    resetGame();
   }
 });
 
@@ -33,10 +28,19 @@ document.getElementById("shoot-2").addEventListener("click", function () {
     "Health: " + player2Health;
 
   if (player2Health <= 0) {
-    wonMatchesPlayer1 += 1;
-    document.getElementById("player-1-heading").textContent =
-      "Player 1 - Won: " + wonMatchesPlayer1;
-    player1Health = 100;
-    player2Health = 100;
+    resetGame();
   }
 });
+
+var resetGame = function () {
+  wonMatchesPlayer2 += 1;
+  document.getElementById("player-2-heading").textContent =
+    "Player 2 - Won: " + wonMatchesPlayer2;
+
+  wonMatchesPlayer1 += 1;
+  document.getElementById("player-1-heading").textContent =
+    "Player 1 - Won: " + wonMatchesPlayer1;
+
+  player1Health = 100;
+  player2Health = 100;
+};
