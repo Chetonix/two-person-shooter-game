@@ -3,3 +3,23 @@
   margin: 0 auto;
   display: inline-block;
 }
+
+#shoot-1,
+#shoot-2 {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+#player-1-heading,
+#player-2-heading {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#player-1-health,
+#player-2-health {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
