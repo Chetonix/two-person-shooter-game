@@ -11,6 +11,16 @@ var activePlayer2 = false;
 //   gameStarted = true;
 // };
 
+// var init = function () {
+//   var player1Health = 10;
+//   var player2Health = 10;
+//   var gameStarted = false;
+//   var wonMatchesPlayer1 = 0;
+//   var wonMatchesPlayer2 = 0;
+//   var activePlayer1 = true;
+//   var activePlayer2 = false;
+// };
+
 document.getElementById("shoot-1").addEventListener("click", function () {
   if (activePlayer1) {
     player1Health -= Math.floor(Math.random() * 5) + 1;
@@ -95,6 +105,8 @@ document.getElementById("shoot-2").addEventListener("click", function () {
     }
   }
 });
+
+// document.getElementById("btn-start").addEventListener("click", init);
 
 // var resetGame = function () {
 //   wonMatchesPlayer2 += 1;
