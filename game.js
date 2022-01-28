@@ -11,15 +11,15 @@ var activePlayer2 = false;
 //   gameStarted = true;
 // };
 
-// var init = function () {
-//   var player1Health = 10;
-//   var player2Health = 10;
-//   var gameStarted = true;
-//   var wonMatchesPlayer1 = 0;
-//   var wonMatchesPlayer2 = 0;
-//   var activePlayer1 = true;
-//   var activePlayer2 = false;
-// };
+var init = function () {
+  var player1Health = 10;
+  var player2Health = 10;
+  var gameStarted = true;
+  var wonMatchesPlayer1 = 0;
+  var wonMatchesPlayer2 = 0;
+  var activePlayer1 = true;
+  var activePlayer2 = false;
+};
 
 document.getElementById("shoot-1").addEventListener("click", function () {
   if (activePlayer1) {
@@ -51,14 +51,41 @@ document.getElementById("shoot-1").addEventListener("click", function () {
     if (wonMatchesPlayer1 === 3) {
       document.getElementById("player-1-heading").textContent =
         "Player 1 Wins the tournament!";
+      document.getElementById("player-1-heading").classList.add("green");
       activePlayer1 = false;
       activePlayer2 = false;
+      //create button
+      // var button = document.createElement("button");
+      // button.innerHTML = "Reset Game";
+
+      // // 2. Append somewhere
+      // var body = document.getElementsByTagName("body")[0];
+      // body.appendChild(button);
+
+      // // 3. Add event handler
+      // button.addEventListener("click", function () {
+      //   init();
+      //   button.style.display = "none";
+      // });
     }
     if (wonMatchesPlayer2 === 3) {
       document.getElementById("player-2-heading").textContent =
         "Player 2 Wins the tournament!";
+      document.getElementById("player-2-heading").classList.add("green");
       activePlayer1 = false;
       activePlayer2 = false;
+      //create button
+      // var button = document.createElement("button");
+      // button.innerHTML = "Reset Game";
+
+      // // 2. Append somewhere
+      // var body = document.getElementsByTagName("body")[0];
+      // body.appendChild(button);
+
+      // // 3. Add event handler
+      // button.addEventListener("click", function () {
+      //   init();
+      // });
     }
   }
 });
