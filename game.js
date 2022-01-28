@@ -23,6 +23,8 @@ var init = function () {
 
 document.getElementById("shoot-1").addEventListener("click", function () {
   if (activePlayer1) {
+    document.getElementById("shoot-1").classList.add("grey");
+    document.getElementById("shoot-2").classList.remove("grey");
     player1Health -= Math.floor(Math.random() * 5) + 1;
 
     document.getElementById("player-1-health").textContent =
@@ -32,6 +34,8 @@ document.getElementById("shoot-1").addEventListener("click", function () {
   }
 
   if (player1Health <= 0) {
+    document.getElementById("shoot-2").classList.remove("grey");
+    document.getElementById("shoot-1").classList.remove("grey");
     wonMatchesPlayer1 += 0;
     wonMatchesPlayer2 += 1;
     document.getElementById("player-1-heading").textContent =
@@ -92,6 +96,8 @@ document.getElementById("shoot-1").addEventListener("click", function () {
 
 document.getElementById("shoot-2").addEventListener("click", function () {
   if (activePlayer2) {
+    document.getElementById("shoot-2").classList.add("grey");
+    document.getElementById("shoot-1").classList.remove("grey");
     player2Health -= Math.floor(Math.random() * 5) + 1;
 
     document.getElementById("player-2-health").innerHTML =
@@ -101,6 +107,8 @@ document.getElementById("shoot-2").addEventListener("click", function () {
   }
 
   if (player2Health <= 0) {
+    document.getElementById("shoot-2").classList.remove("grey");
+    document.getElementById("shoot-1").classList.remove("grey");
     wonMatchesPlayer1 += 1;
     wonMatchesPlayer2 += 0;
     document.getElementById("player-1-heading").textContent =
@@ -121,12 +129,15 @@ document.getElementById("shoot-2").addEventListener("click", function () {
     if (wonMatchesPlayer1 === 3) {
       document.getElementById("player-1-heading").textContent =
         "Player 1 Wins the tournament!";
+      document.getElementById("player-1-heading").classList.add("green");
+
       activePlayer1 = false;
       activePlayer2 = false;
     }
     if (wonMatchesPlayer2 === 3) {
       document.getElementById("player-2-heading").textContent =
         "Player 2 Wins the tournament!";
+      document.getElementById("player-2-heading").classList.add("green");
       activePlayer1 = false;
       activePlayer2 = false;
     }
