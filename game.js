@@ -5,11 +5,11 @@ var wonMatchesPlayer1 = 0;
 var wonMatchesPlayer2 = 0;
 var activePlayer1 = true;
 var activePlayer2 = false;
-document.getElementById("btn-start").addEventListener("click", startGame);
+// document.getElementById("btn-start").addEventListener("click", startGame);
 
-var startGame = function () {
-  gameStarted = true;
-};
+// var startGame = function () {
+//   gameStarted = true;
+// };
 
 document.getElementById("shoot-1").addEventListener("click", function () {
   if (activePlayer1) {
