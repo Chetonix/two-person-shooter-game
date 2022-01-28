@@ -34,7 +34,7 @@ document.getElementById("shoot-1").addEventListener("click", function () {
   }
 
   if (player1Health <= 0) {
-    document.getElementById("shoot-2").classList.remove("grey");
+    // document.getElementById("shoot-2").classList.remove("grey");
     document.getElementById("shoot-1").classList.remove("grey");
     wonMatchesPlayer1 += 0;
     wonMatchesPlayer2 += 1;
@@ -108,7 +108,7 @@ document.getElementById("shoot-2").addEventListener("click", function () {
 
   if (player2Health <= 0) {
     document.getElementById("shoot-2").classList.remove("grey");
-    document.getElementById("shoot-1").classList.remove("grey");
+    // document.getElementById("shoot-1").classList.remove("grey");
     wonMatchesPlayer1 += 1;
     wonMatchesPlayer2 += 0;
     document.getElementById("player-1-heading").textContent =
