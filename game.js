@@ -1,5 +1,5 @@
-var player1Health = 100;
-var player2Health = 100;
+var player1Health = 10;
+var player2Health = 10;
 var gameStarted = false;
 var wonMatchesPlayer1 = 0;
 var wonMatchesPlayer2 = 0;
@@ -28,12 +28,14 @@ document.getElementById("shoot-1").addEventListener("click", function () {
       "Player 1 - Won: " + wonMatchesPlayer1;
     document.getElementById("player-2-heading").textContent =
       "Player 2 - Won: " + wonMatchesPlayer2;
-    player1Health = 100;
-    player2Health = 100;
+    player1Health = 10;
+    player2Health = 10;
     document.getElementById("player-1-health").textContent =
       "Health: " + player1Health;
     document.getElementById("player-2-health").innerHTML =
       "Health: " + player2Health;
+    activePlayer1 = true;
+    activePlayer2 = false;
   }
   if (wonMatchesPlayer1 === 3 || wonMatchesPlayer2 === 3) {
     if (wonMatchesPlayer1 === 3) {
@@ -68,22 +70,28 @@ document.getElementById("shoot-2").addEventListener("click", function () {
       "Player 1 - Won: " + wonMatchesPlayer1;
     document.getElementById("player-2-heading").textContent =
       "Player 2 - Won: " + wonMatchesPlayer2;
-    player1Health = 100;
-    player2Health = 100;
+    player1Health = 10;
+    player2Health = 10;
     document.getElementById("player-1-health").textContent =
       "Health: " + player1Health;
     document.getElementById("player-2-health").innerHTML =
       "Health: " + player2Health;
+    activePlayer1 = true;
+    activePlayer2 = false;
   }
 
   if (wonMatchesPlayer1 === 3 || wonMatchesPlayer2 === 3) {
     if (wonMatchesPlayer1 === 3) {
       document.getElementById("player-1-heading").textContent =
         "Player 1 Wins the tournament!";
+      activePlayer1 = false;
+      activePlayer2 = false;
     }
     if (wonMatchesPlayer2 === 3) {
       document.getElementById("player-2-heading").textContent =
         "Player 2 Wins the tournament!";
+      activePlayer1 = false;
+      activePlayer2 = false;
     }
   }
 });
